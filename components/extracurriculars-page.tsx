@@ -68,6 +68,34 @@ export default function ExtracurricularsPage({ onNavigate }: ExtracurricularsPag
       icon: "🥋",
     },
     {
+      id: "hadroh",
+      name: "Hadroh",
+      category: "Seni Islami",
+      description:
+        "Seni musik Islami yang memadukan dakwah dan keindahan. Belajar bermain rebana dan vokal Islami.",
+      image: "/islamic-music-hadroh.png",
+      members: 22,
+      schedule: "Jumat & Minggu, 15:00-17:00",
+      location: "Masjid Sekolah",
+      achievements: ["Juara 1 Festival Hadroh Provinsi", "Best Performance Islamic Festival"],
+      color: "from-emerald-500 to-teal-400",
+      icon: "🎵",
+    },
+    {
+      id: "qori",
+      name: "Qori",
+      category: "Tilawah",
+      description:
+        "Seni baca Al-Quran dengan tartil dan indah. Persiapan untuk kompetisi MTQ dan festival tilawah.",
+      image: "/quran-recitation-students.png",
+      members: 16,
+      schedule: "Rabu & Sabtu, 16:00-18:00",
+      location: "Masjid Sekolah",
+      achievements: ["Juara 2 MTQ Tingkat Provinsi", "Harapan 1 Festival Tilawah"],
+      color: "from-indigo-500 to-purple-400",
+      icon: "📖",
+    },
+    {
       id: "pramuka",
       name: "Pramuka",
       category: "Kepanduan",
@@ -96,6 +124,7 @@ export default function ExtracurricularsPage({ onNavigate }: ExtracurricularsPag
   ]
 
   const categories = ["Semua", "Teknologi", "Olahraga", "Seni", "Bela Diri", "Kepanduan"]
+  const categories = ["Semua", "Teknologi", "Olahraga", "Seni", "Bela Diri", "Seni Islami", "Tilawah", "Kepanduan"]
 
   return (
     <div className="min-h-screen py-20">

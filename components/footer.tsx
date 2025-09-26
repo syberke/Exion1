@@ -29,6 +29,8 @@ export default function Footer({ onNavigate }: FooterProps) {
     { name: "Futsal", section: "futsal" },
     { name: "Musik", section: "musik" },
     { name: "Pencak Silat", section: "silat" },
+    { name: "Hadroh", section: "hadroh" },
+    { name: "Qori", section: "qori" },
   ]
 
   const socialLinks = [

@@ -81,6 +81,8 @@ export default function SuperAdminDashboard({ onLogout }: SuperAdminDashboardPro
     { value: "silat", label: "Pencak Silat", color: "text-red-700", bgColor: "bg-red-100" },
     { value: "futsal", label: "Futsal", color: "text-orange-700", bgColor: "bg-orange-100" },
     { value: "band", label: "Band", color: "text-purple-700", bgColor: "bg-purple-100" },
+    { value: "hadroh", label: "Hadroh", color: "text-emerald-700", bgColor: "bg-emerald-100" },
+    { value: "qori", label: "Qori", color: "text-indigo-700", bgColor: "bg-indigo-100" },
   ]
 
   const navigationItems = [
@@ -438,6 +440,8 @@ export default function SuperAdminDashboard({ onLogout }: SuperAdminDashboardPro
                     <SelectItem value="silat_admin">Admin Pencak Silat</SelectItem>
                     <SelectItem value="futsal_admin">Admin Futsal</SelectItem>
                     <SelectItem value="band_admin">Admin Band</SelectItem>
+                    <SelectItem value="hadroh_admin">Admin Hadroh</SelectItem>
+                    <SelectItem value="qori_admin">Admin Qori</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

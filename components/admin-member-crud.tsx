@@ -314,7 +314,7 @@ export default function AdminMemberCRUD({ ekskulType }: AdminMemberCRUDProps) {
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-4">
                   <Avatar className="h-12 w-12">
-                    <AvatarImage src={member.photoUrl || "/placeholder.svg"} />
+                    <AvatarImage src={member.photoUrl || "/placeholder.svg?height=40&width=40"} />
                     <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
                   </Avatar>
                   <div>

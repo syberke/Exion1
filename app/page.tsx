@@ -11,6 +11,8 @@ import RobotikPage from "@/components/robotik-page"
 import SilatPage from "@/components/silat-page"
 import FutsalPage from "@/components/futsal-page"
 import MusikPage from "@/components/musik-page"
+import HadrohPage from "@/components/hadroh-page"
+import QoriPage from "@/components/qori-page"
 import AdminLoginPage from "@/components/admin-login-page"
 import AdminDashboardRouter from "@/components/admin-dashboard-router"
 import Footer from "@/components/footer"
@@ -92,6 +94,10 @@ export default function SchoolWebsite() {
         return <FutsalPage />
       case "musik":
         return <MusikPage />
+      case "hadroh":
+        return <HadrohPage />
+      case "qori":
+        return <QoriPage />
       default:
         return <HomePage onNavigate={setActiveSection} dokumentasi={globalDokumentasi} members={globalMembers} />
     }

@@ -145,6 +145,32 @@
         color: "text-red-400",
         bgColor: "bg-red-400/10",
       },
+      {
+        id: "hadroh",
+        name: "Hadroh",
+        description: "Harmony and spirituality—express faith through music",
+        image: "/islamic-music-hadroh.png",
+        members: members.filter((m) => m.ekskulType === "hadroh").length || 22,
+        achievements: 8,
+        category: "Seni Islami",
+        level: "Spiritual",
+        icon: "🎵",
+        color: "text-emerald-400",
+        bgColor: "bg-emerald-400/10",
+      },
+      {
+        id: "qori",
+        name: "Qori",
+        description: "Beauty and devotion—perfect your Quran recitation",
+        image: "/quran-recitation-students.png",
+        members: members.filter((m) => m.ekskulType === "qori").length || 16,
+        achievements: 6,
+        category: "Tilawah",
+        level: "Sacred",
+        icon: "📖",
+        color: "text-indigo-400",
+        bgColor: "bg-indigo-400/10",
+      },
     ]
 
     const stats = [

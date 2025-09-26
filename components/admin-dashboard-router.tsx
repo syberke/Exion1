@@ -6,6 +6,8 @@ import RobotikAdminDashboard from "./robotik-admin-dashboard"
 import SilatAdminDashboard from "./silat-admin-dashboard"
 import FutsalAdminDashboard from "./futsal-admin-dashboard"
 import BandAdminDashboard from "./band-admin-dashboard"
+import HadrohAdminDashboard from "./hadroh-admin-dashboard"
+import QoriAdminDashboard from "./qori-admin-dashboard"
 import AdminDashboard from "./admin-dashboard"
 import AdminErrorBoundary from "./admin-error-boundary"
 import LoadingSpinner from "./loading-spinner"
@@ -66,6 +68,18 @@ export default function AdminDashboardRouter({ onLogout }: AdminDashboardRouterP
         return (
           <AdminErrorBoundary>
             <BandAdminDashboard onLogout={onLogout} />
+          </AdminErrorBoundary>
+        )
+      case "hadroh_admin":
+        return (
+          <AdminErrorBoundary>
+            <HadrohAdminDashboard onLogout={onLogout} />
+          </AdminErrorBoundary>
+        )
+      case "qori_admin":
+        return (
+          <AdminErrorBoundary>
+            <QoriAdminDashboard onLogout={onLogout} />
           </AdminErrorBoundary>
         )
       default:

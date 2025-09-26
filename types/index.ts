@@ -8,6 +8,8 @@ export interface User {
     | "silat_admin"
     | "futsal_admin"
     | "band_admin"
+    | "hadroh_admin"
+    | "qori_admin"
   createdAt: Date
   updatedAt: Date
 }
@@ -63,8 +65,8 @@ export interface Attendance {
   id: string
   memberId: string
   scheduleId?: string
-  date: Date
-  status: "present" | "absent" | "late" | "excused" // 🔹 fix mapping (Hadir → present, dll.)
+  date: string
+  status: "Hadir" | "Tidak Hadir" | "Izin" | "Sakit"
   notes?: string
   ekskulType: EkskulType
   createdAt: Date
@@ -91,6 +93,8 @@ export type EkskulType =
   | "futsal"
   | "band"
   | "musik" // 🔹 ditambah biar error EkskulType hilang
+  | "hadroh"
+  | "qori"
   | "umum"  // 🔹 ditambah juga karena muncul di log error
 
 export interface Event {

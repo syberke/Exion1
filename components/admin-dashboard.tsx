@@ -99,6 +99,10 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
         return "Futsal"
       case "band":
         return "Band"
+      case "hadroh":
+        return "Hadroh"
+      case "qori":
+        return "Qori"
       default:
         return "Semua Ekstrakurikuler"
     }
@@ -117,6 +121,10 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
         return "Admin Futsal"
       case "band_admin":
         return "Admin Band"
+      case "hadroh_admin":
+        return "Admin Hadroh"
+      case "qori_admin":
+        return "Admin Qori"
       default:
         return "Administrator"
     }

@@ -22,7 +22,7 @@ export default function AdminAttendanceManagement() {
   const getCurrentEkskulType = () => {
     if (!user) return null
     if (user.role === "super_admin") return null
-    return user.role.replace("_admin", "") as "robotik" | "silat" | "futsal" | "musik"
+    return user.role.replace("_admin", "") as "robotik" | "silat" | "futsal" | "musik" | "hadroh" | "qori"
   }
 
   useEffect(() => {

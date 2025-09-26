@@ -36,7 +36,7 @@ export default function AdminAchievementManagement() {
   const getCurrentEkskulType = () => {
     if (!user) return null
     if (user.role === "super_admin") return null
-    return user.role.replace("_admin", "") as "robotik" | "silat" | "futsal" | "band"
+    return user.role.replace("_admin", "") as "robotik" | "silat" | "futsal" | "band" | "hadroh" | "qori"
   }
 
   useEffect(() => {
@@ -341,12 +341,11 @@ export default function AdminAchievementManagement() {
                   }}
                   multiple={false}
                   accept="image/*"
-                  tags={[getCurrentEkskulType() || "general", "achievement"]}
                 />
                 {achievementPhotoPreview && (
                   <div className="mt-2">
                     <img
-                      src={achievementPhotoPreview || "/placeholder.svg"}
+                      src={achievementPhotoPreview}
                       alt="Preview"
                       className="w-32 h-24 object-cover rounded border"
                     />
