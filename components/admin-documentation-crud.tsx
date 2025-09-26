@@ -235,7 +235,6 @@ export default function AdminDocumentationCRUD({ ekskulType }: AdminDocumentatio
                   multiple={true}
                   maxFiles={10}
                   accept="image/*"
-                  tags={[getFilterEkskulType() || "general", "documentation"]}
                 />
               </div>
 
@@ -254,7 +253,7 @@ export default function AdminDocumentationCRUD({ ekskulType }: AdminDocumentatio
             <div className="aspect-video bg-muted flex items-center justify-center overflow-hidden">
               {doc.image || doc.photoUrls?.[0] ? (
                 <img
-                  src={doc.image || doc.photoUrls?.[0] || "/placeholder.svg"}
+                  src={doc.image || doc.photoUrls?.[0]}
                   alt={doc.title}
                   className="w-full h-full object-cover"
                 />

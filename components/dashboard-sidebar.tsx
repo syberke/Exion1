@@ -21,6 +21,7 @@ interface DashboardSidebarProps {
   isOpen: boolean
   onClose: () => void
   variant?: "default" | "robotik" | "silat" | "futsal" | "band"
+  variant?: "default" | "robotik" | "silat" | "futsal" | "band" | "hadroh" | "qori"
 }
 
 export default function DashboardSidebar({
@@ -85,6 +86,26 @@ export default function DashboardSidebar({
       subtitleColor: "text-purple-600",
       activeButton: "bg-purple-600 text-white shadow-md",
       hoverButton: "hover:text-foreground hover:bg-purple-50 dark:hover:bg-purple-900/20",
+    },
+    hadroh: {
+      border: "border-r border-emerald-200 dark:border-emerald-800",
+      headerBorder: "border-b border-emerald-200 dark:border-emerald-800",
+      footerBorder: "border-t border-emerald-200 dark:border-emerald-800",
+      iconColor: "text-emerald-600",
+      iconBg: "bg-emerald-500",
+      subtitleColor: "text-emerald-600",
+      activeButton: "bg-emerald-600 text-white shadow-md",
+      hoverButton: "hover:text-foreground hover:bg-emerald-50 dark:hover:bg-emerald-900/20",
+    },
+    qori: {
+      border: "border-r border-indigo-200 dark:border-indigo-800",
+      headerBorder: "border-b border-indigo-200 dark:border-indigo-800",
+      footerBorder: "border-t border-indigo-200 dark:border-indigo-800",
+      iconColor: "text-indigo-600",
+      iconBg: "bg-indigo-500",
+      subtitleColor: "text-indigo-600",
+      activeButton: "bg-indigo-600 text-white shadow-md",
+      hoverButton: "hover:text-foreground hover:bg-indigo-50 dark:hover:bg-indigo-900/20",
     },
   }
 

@@ -15,6 +15,8 @@ interface CloudinaryUploadProps {
   maxFiles?: number;
   accept?: string;
   className?: string;
+  folder?: string;
+  tags?: string[];
 }
 
 const CloudinaryUpload = ({
@@ -24,6 +26,8 @@ const CloudinaryUpload = ({
   maxFiles = 5,
   accept = "image/*",
   className = "",
+  folder = "uploads",
+  tags = [],
 }: CloudinaryUploadProps) => {
   const [files, setFiles] = useState<File[]>([]);
   const [previews, setPreviews] = useState<string[]>([]);
@@ -77,10 +81,27 @@ const CloudinaryUpload = ({
       const results: { secure_url: string }[] = [];
 
       for (let i = 0; i < files.length; i++) {
-        const result = await uploadImage(files[i], (progress) => {
-          setUploadProgress((prev) => ({ ...prev, [i]: progress }));
+        const formData = new FormData();
+        formData.append("file", files[i]);
+        formData.append("folder", folder);
+        
+        const response = await fetch("/api/cloudinary/upload", {
+          method: "POST",
+          body: formData,
         });
-        results.push(result);
+        
+        if (!response.ok) {
+          throw new Error("Upload failed");
+        }
+        
+        const result = await response.json();
+        results.push({ secure_url: result.secure_url });
+        
+        // Update progress
+        setUploadProgress((prev) => ({
+          ...prev,
+          [i]: { loaded: 100, total: 100, percentage: 100 }
+        }));
       }
 
       setSuccess(true);

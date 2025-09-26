@@ -47,6 +47,10 @@ function getFolderForEkskul(ekskulType: EkskulType) {
       return "ekskul/futsal"
     case "band":
       return "ekskul/band"
+    case "hadroh":
+      return "ekskul/hadroh"
+    case "qori":
+      return "ekskul/qori"
     default:
       return "ekskul/general"
   }

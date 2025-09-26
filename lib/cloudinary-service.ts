@@ -166,6 +166,10 @@ export const getFolderForEkskul = (ekskulType: string): string => {
     case "band":
     case "music":
       return "ekskul/music"
+    case "hadroh":
+      return "ekskul/hadroh"
+    case "qori":
+      return "ekskul/qori"
     default:
       return "ekskul/documentation"
   }

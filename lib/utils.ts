@@ -28,6 +28,8 @@ export function getEkskulDisplayName(ekskulType: string): string {
     silat: "Pencak Silat",
     futsal: "Futsal",
     band: "Band",
+    hadroh: "Hadroh",
+    qori: "Qori",
   }
   return names[ekskulType as keyof typeof names] || ekskulType
 }

@@ -103,6 +103,10 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
         return "Hadroh"
       case "qori":
         return "Qori"
+      case "hadroh":
+        return "Hadroh"
+      case "qori":
+        return "Qori"
       default:
         return "Semua Ekstrakurikuler"
     }
@@ -121,6 +125,10 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
         return "Admin Futsal"
       case "band_admin":
         return "Admin Band"
+      case "hadroh_admin":
+        return "Admin Hadroh"
+      case "qori_admin":
+        return "Admin Qori"
       case "hadroh_admin":
         return "Admin Hadroh"
       case "qori_admin":
@@ -175,7 +183,7 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
     try {
       let imageUrl = ""
       if (docPhoto) {
-        const result = await uploadImage(docPhoto)   // ✅ pakai uploadImage
+        const result = await uploadImage(docPhoto)
         imageUrl = result.secure_url
       }
 
@@ -216,7 +224,7 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
     try {
       let photoUrl = ""
       if (memberPhoto) {
-        const result = await uploadImage(memberPhoto)   // ✅ pakai uploadImage
+        const result = await uploadImage(memberPhoto)
         photoUrl = result.secure_url
       }
 
@@ -482,7 +490,7 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
                       <div className="w-12 h-12 rounded-full overflow-hidden bg-muted flex items-center justify-center border-2 border-border">
                         {member.photoUrl ? (
                           <img
-                            src={member.photoUrl || "/placeholder.svg"}
+                            src={member.photoUrl}
                             alt={member.name}
                             className="w-full h-full object-cover"
                           />

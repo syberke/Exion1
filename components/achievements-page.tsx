@@ -74,6 +74,10 @@ export default function AchievementsPage() {
         return "from-green-500 to-emerald-500"
       case "band":
         return "from-purple-500 to-pink-500"
+      case "hadroh":
+        return "from-emerald-500 to-teal-500"
+      case "qori":
+        return "from-indigo-500 to-purple-500"
       default:
         return "from-blue-500 to-cyan-500"
     }
@@ -132,7 +136,7 @@ export default function AchievementsPage() {
               >
                 <div className="relative">
                   <img
-                    src={achievement.photoUrl || "/placeholder.svg?height=200&width=300"}
+                    src={achievement.image || achievement.photoUrl || "/placeholder.svg?height=200&width=300"}
                     alt={achievement.title}
                     className="w-full h-48 object-cover"
                   />
