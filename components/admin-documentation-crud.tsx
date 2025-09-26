@@ -10,7 +10,7 @@ import { Label } from "@/components/ui/label"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Badge } from "@/components/ui/badge"
 import { Textarea } from "@/components/ui/textarea"
-import { Trash2, Edit, Plus, Calendar, MapPin, Users, Camera } from "lucide-react"
+import { Trash2, CreditCard as Edit, Plus, Calendar, MapPin, Users, Camera } from "lucide-react"
 import { documentationOperations } from "@/lib/crud-operations"
 import { useAuth } from "@/hooks/use-auth"
 import CloudinaryUpload from "./cloudinary-upload"
@@ -235,6 +235,7 @@ export default function AdminDocumentationCRUD({ ekskulType }: AdminDocumentatio
                   multiple={true}
                   maxFiles={10}
                   accept="image/*"
+                  tags={[getFilterEkskulType() || "general", "documentation"]}
                 />
               </div>
 
@@ -253,7 +254,7 @@ export default function AdminDocumentationCRUD({ ekskulType }: AdminDocumentatio
             <div className="aspect-video bg-muted flex items-center justify-center overflow-hidden">
               {doc.image || doc.photoUrls?.[0] ? (
                 <img
-                  src={doc.image || doc.photoUrls?.[0]}
+                  src={doc.image || doc.photoUrls?.[0] || "/placeholder.svg"}
                   alt={doc.title}
                   className="w-full h-full object-cover"
                 />

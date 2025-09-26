@@ -5,7 +5,7 @@ import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Upload, X, CheckCircle, AlertCircle, File, ImageIcon } from "lucide-react";
+import { Upload, X, CircleCheck as CheckCircle, CircleAlert as AlertCircle, File, Image as ImageIcon } from "lucide-react";
 import { uploadImage, type UploadProgress } from "@/lib/cloudinary-upload";
 
 interface CloudinaryUploadProps {

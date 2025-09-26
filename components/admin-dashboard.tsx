@@ -3,27 +3,7 @@
 import { useState, useEffect } from "react"
 import type React from "react"
 
-import {
-  LayoutDashboard,
-  FileText,
-  Users,
-  Settings,
-  LogOut,
-  Menu,
-  X,
-  Plus,
-  Calendar,
-  MapPin,
-  Camera,
-  Edit,
-  Trash2,
-  UserPlus,
-  GraduationCap,
-  Shield,
-  Clock,
-  Trophy,
-  BarChart3,
-} from "lucide-react"
+import { LayoutDashboard, FileText, Users, Settings, LogOut, Menu, X, Plus, Calendar, MapPin, Camera, CreditCard as Edit, Trash2, UserPlus, GraduationCap, Shield, Clock, Trophy, ChartBar as BarChart3 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -103,10 +83,6 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
         return "Hadroh"
       case "qori":
         return "Qori"
-      case "hadroh":
-        return "Hadroh"
-      case "qori":
-        return "Qori"
       default:
         return "Semua Ekstrakurikuler"
     }
@@ -125,10 +101,6 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
         return "Admin Futsal"
       case "band_admin":
         return "Admin Band"
-      case "hadroh_admin":
-        return "Admin Hadroh"
-      case "qori_admin":
-        return "Admin Qori"
       case "hadroh_admin":
         return "Admin Hadroh"
       case "qori_admin":
@@ -183,7 +155,7 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
     try {
       let imageUrl = ""
       if (docPhoto) {
-        const result = await uploadImage(docPhoto)
+        const result = await uploadImage(docPhoto)   // ✅ pakai uploadImage
         imageUrl = result.secure_url
       }
 
@@ -224,7 +196,7 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
     try {
       let photoUrl = ""
       if (memberPhoto) {
-        const result = await uploadImage(memberPhoto)
+        const result = await uploadImage(memberPhoto)   // ✅ pakai uploadImage
         photoUrl = result.secure_url
       }
 
@@ -490,7 +462,7 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
                       <div className="w-12 h-12 rounded-full overflow-hidden bg-muted flex items-center justify-center border-2 border-border">
                         {member.photoUrl ? (
                           <img
-                            src={member.photoUrl}
+                            src={member.photoUrl || "/placeholder.svg"}
                             alt={member.name}
                             className="w-full h-full object-cover"
                           />

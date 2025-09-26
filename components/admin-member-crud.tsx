@@ -12,7 +12,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Textarea } from "@/components/ui/textarea"
-import { Trash2, Edit, Plus, Search, Filter } from "lucide-react"
+import { Trash2, CreditCard as Edit, Plus, Search, Filter } from "lucide-react"
 import { memberOperations } from "@/lib/crud-operations"
 import { useAuth } from "@/hooks/use-auth"
 import CloudinaryUpload from "./cloudinary-upload"
@@ -314,7 +314,7 @@ export default function AdminMemberCRUD({ ekskulType }: AdminMemberCRUDProps) {
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-4">
                   <Avatar className="h-12 w-12">
-                    <AvatarImage src={member.photoUrl || "/placeholder.svg?height=40&width=40"} />
+                    <AvatarImage src={member.photoUrl || "/placeholder.svg"} />
                     <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
                   </Avatar>
                   <div>

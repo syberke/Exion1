@@ -2,27 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Save, Download } from "lucide-react"
-import {
-  LayoutDashboard,
-  Users,
-  UserCog,
-  Settings,
-  LogOut,
-  Menu,
-  X,
-  Plus,
-  Shield,
-  BarChart3,
-  Activity,
-  Trophy,
-  FileText,
-  Edit,
-  Trash2,
-  AlertTriangle,
-  CheckCircle,
-  TrendingUp,
-  Eye,
-} from "lucide-react"
+import { LayoutDashboard, Users, UserCog, Settings, LogOut, Menu, X, Plus, Shield, ChartBar as BarChart3, Activity, Trophy, FileText, CreditCard as Edit, Trash2, TriangleAlert as AlertTriangle, CircleCheck as CheckCircle, TrendingUp, Eye } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"

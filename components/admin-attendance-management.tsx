@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Users, Calendar, CheckCircle, XCircle, Clock, Download } from "lucide-react"
+import { Users, Calendar, CircleCheck as CheckCircle, Circle as XCircle, Clock, Download } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
